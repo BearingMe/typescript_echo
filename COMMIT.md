@@ -7,7 +7,7 @@
 Cada commit consiste em um **header**, **body** e **footer**, assim como na semântica do HTML. Porém, diferente de Body e Footer, a mensagem do Header tem sua própria formatação, a qual inclui um **tipo** e o **assunto** abordado:   
 
 ```fundamental
-<tipo>: <assunto>
+[TIPO]: <assunto>
 <ESPAÇO EM BRANCO>
 <body>
 <ESPAÇO EM BRANCO>
@@ -22,7 +22,7 @@ no github e em outras ferramentas. O próprio vscode formata isso para você.
 
 ### Tipo
 
-O tipo deve ser um dos seguintes, escrito em inglês e maiúsculo:
+O tipo deve ser um dos seguintes, escrito em inglês, maiúsculo e entre colchetes:
 
 * **FEAT**: Uma nova funcionalidade
 * **FIX**: Um bug corrigido
@@ -48,6 +48,13 @@ O Body também deve conter a motivação para a mudança
 
 O Footer deve conter qualquer informação sobre **breaking changes**, ou seja, mudanças que podem fazer outras pessoas terem a necessidade de alterar seu código, também é o local para colocar [as issues que seu commit resolve][closing-issues].    
 
+### Quando commitar
+
+Não existe uma forma correta de usar o git, mas existem várias formas erradas. Aqui algumas dicas que podem ser uteis:  
+
+* **Commite com frequência**: Adicionou um método? Renomeou arquivos? Mudou algo? Commite. O git é o melhor amigo do seu botão de save, sempre que usar um, use o outro. Apenas garanta que o **código funcione** antes.
+* **Você não precisa mandar para o GitHub cada commit**: Criar um commit é simples, rápido, e levando em conta nosso padrão, você pode fazer com duas linhas de código. Isso não quer dizer que deva mandar para a núvem cada atualização. Faça no seu tempo.
+* **O mundo não vai acabar se você esquecer do git add .**: Esse ponto significa todos os arquivos. Se você esqueceu de commitar e alterou toda a existência da vida na terra durante esse meio tempo. Seleciona arquivo por arquivo, ou pastar, e descreva indivudualmente. Agrupe eles de acordo com sua funcionalidade e, caso tenha feito mais de um dos tipos descritos, só colocar dois deles juntos (por isso estão entre colchetes) 
 
 
 
