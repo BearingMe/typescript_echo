@@ -18,13 +18,7 @@ Cada commit consiste em um **header**, **body** e **footer**, assim como na sem�
 O **header** é obrigatório. Sendo ele a unica seção com essa exigência.  
 
 As linhas de commit não podem passar de 80 caracteres. Isso permite que seja mais fácil de ler 
-no github e em outras ferramentas. O próprio vscode formata isso para você.     
-
-### Reverter
-
-Se o commit reverte outro, ele deve começar com a tag `revert:`, seguido pelo Header do commit revertido. Isso ajuda a manter uma melhor referência do problema.   
-O Body deve dizer: `Isso reverte o commit <hash>`. Acredito que se você conseguiu reverter o commit então provavelmente deve saber o que é o hash.  
-Um commit com esse formato é automaticamente criado pelo comando `git revert`.  
+no github e em outras ferramentas. O próprio vscode formata isso para você.      
 
 ### Tipo
 
