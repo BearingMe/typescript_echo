@@ -6,13 +6,14 @@
 
 Cada commit consiste em um **header**, **body** e **footer**, assim como na semântica do HTML. Porém, diferente de Body e Footer, a mensagem do Header tem sua própria formatação, a qual inclui um **tipo** e o **assunto** abordado:   
 
-```fundamental
-[TIPO] <assunto>
-<ESPAÇO EM BRANCO>
-<body>
-<ESPAÇO EM BRANCO>
-<footer>
-<nome do autor>
+```html
+<tipo requerido> <assunto requerido/> // header
+-- espaço em branco ---
+<body opcional/>
+-- espaço em branco ---
+<footer opcional/>
+-- espaço em branco ---
+<autor opcional/>
 ```
 
 O **header** é obrigatório. Sendo ele a unica seção com essa exigência.  
@@ -24,14 +25,13 @@ no github e em outras ferramentas. O próprio vscode formata isso para você.
 
 O tipo deve ser um dos seguintes, escrito em inglês, maiúsculo e entre colchetes:
 
-* **FEAT**: Uma nova funcionalidade
-* **FIX**: Um bug corrigido
-* **DOCS**: Mudanças na documentação
-* **REFACTOR**: Uma mudança no código que não cria funcionalidade nem corrige um bug
+* **[FEAT]**: Uma nova funcionalidade
+* **[FIX]**: Um bug corrigido
+* **[DOCS]**: Mudanças na documentação
+* **[UPDATE]**: Quando arquivos estáticos são movidos, renomeados, adicionados ou substituidos
+* **[REFACTOR]**: Uma mudança no código que não cria funcionalidade nem corrige um bug   
 
 ### Assunto
-
-> O assunto é o que vai no Header depois do tipo  
 
 O assunto deve conter uma descriçâo clara da mundaça:  
 
