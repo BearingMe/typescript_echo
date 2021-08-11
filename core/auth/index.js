@@ -24,6 +24,7 @@ class Session extends whatsapp.Client {
     super({
       puppeteer: {
         args: ["--no-sandbox", "--disable-setuid-sandbox"],
+        headless: false
       },
     });
   }
@@ -39,6 +40,7 @@ class Session extends whatsapp.Client {
     // se autenticado, salva um arquivo json com os dados da sessão
     this.on("authenticated", (session) => {
       fs.writeFileSync(SESSION_FILE_PATH, JSON.stringify(session));
+      console.log('O cliente está pronto!')
     });
 
     // se não autenticado, exibe uma mesagem de erro no terminal
@@ -70,3 +72,7 @@ class Session extends whatsapp.Client {
     this.initialize();
   }
 }
+
+module.exports = {
+  Session,
+};
