@@ -1,2 +1,3 @@
 node_modules/
 core/auth/session.json
+sandbox.js

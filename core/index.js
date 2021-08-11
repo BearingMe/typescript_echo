@@ -1,31 +1,12 @@
 const auth = require("./auth");
-
-class Observable {
-  constructor(eventTrigger) {
-    this._eventTrigger = eventTrigger;
-    this._observers = [];
-  }
-
-  subscribe(component) {
-    if (component.trigger === this._eventTrigger)
-      this._observers.push(component.template);
-  }
-
-  subscribeAll(componentArray) {
-    componentArray.forEach((component) => this.subscribe(component));
-  }
-
-  notify(payload) {
-    this._observers.forEach((observer) => observer(payload));
-  }
-}
+const patterns = require("./patterns");
 
 class Bot {
   constructor(options) {
     this._session = new auth.Session();
     this._components = options.components;
-    this._observeMessage = new Observable("message");
-    this._observeMessageCreate = new Observable("message_create");
+    this._observeMessage = new patterns.Observable("message");
+    this._observeMessageCreate = new patterns.Observable("message_create");
   }
 
   _loadObservers() {
@@ -40,39 +21,9 @@ class Bot {
 
   start() {
     this._loadObservers();
-    this._loadEvents()
-    this._session.start()
+    this._loadEvents();
+    this._session.start();
   }
 }
 
-const exampleA = {
-  name: "exampleA",
-  trigger: "message",
-  template: () => console.log("message -> exampleA"),
-};
-
-const exampleB = {
-  name: "exampleB",
-  trigger: "message_create",
-  template: () => console.log("message_create -> exampleB"),
-};
-
-const exampleC = {
-  name: "exampleC",
-  trigger: "message",
-  template: () => console.log("message -> exampleC"),
-};
-
-const exampleD = {
-  name: "exampleD",
-  trigger: "message_create",
-  template: () => {
-    throw new Error("fodeu");
-  },
-};
-
-let bot = new Bot({
-  components: [exampleA, exampleB, exampleC, exampleD],
-});
-
-bot.start();
+module.exports = Bot;
