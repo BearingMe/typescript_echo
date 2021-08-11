@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/BearingMe/Bot/issues"
   },
-  "homepage": "https://github.com/BearingMe/Bot#readme"
+  "homepage": "https://github.com/BearingMe/Bot#readme",
+  "dependencies": {
+    "qrcode-terminal": "^0.12.0",
+    "whatsapp-web.js": "^1.14.0"
+  }
 }
