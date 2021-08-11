@@ -7,7 +7,7 @@
 Cada commit consiste em um **header**, **body** e **footer**, assim como na semântica do HTML. Porém, diferente de Body e Footer, a mensagem do Header tem sua própria formatação, a qual inclui um **tipo** e o **assunto** abordado:   
 
 ```fundamental
-[TIPO]: <assunto>
+[TIPO] <assunto>
 <ESPAÇO EM BRANCO>
 <body>
 <ESPAÇO EM BRANCO>
@@ -54,7 +54,7 @@ Não existe uma forma correta de usar o git, mas existem várias formas erradas.
 
 * **Commite com frequência**: Adicionou um método? Renomeou arquivos? Mudou algo? Commite. O git é o melhor amigo do seu botão de save, sempre que usar um, use o outro. Apenas garanta que o **código funcione** antes.
 * **Você não precisa mandar para o GitHub cada commit**: Criar um commit é simples, rápido, e levando em conta nosso padrão, você pode fazer com duas linhas de código. Isso não quer dizer que deva mandar para a núvem cada atualização. Faça no seu tempo.
-* **O mundo não vai acabar se você esquecer do git add . **: Esse ponto final significa todos os arquivos. Se você esqueceu de commitar e alterou toda a existência da vida na terra durante esse meio tempo. Selecione arquivo por arquivo, ou suas pastas, e descreva individualmente. Agrupe eles de acordo com sua funcionalidade e, caso tenha feito mais de um dos tipos descritos, basta descrever cada um junto no Header (por isso devem estar entre colchetes) 
+* **O mundo não vai acabar se você esquecer do git add .**: Esse ponto final significa todos os arquivos. Se você esqueceu de commitar e alterou toda a existência da vida na terra durante esse meio tempo. Selecione arquivo por arquivo, ou suas pastas, e descreva individualmente. Agrupe eles de acordo com sua funcionalidade e, caso tenha feito mais de um dos tipos descritos, basta descrever cada um junto no Header (por isso devem estar entre colchetes) 
 
 
 
