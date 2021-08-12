@@ -10,8 +10,8 @@ class Bot {
   }
 
   _loadObservers() {
-    this._observeMessage.subscribeAll(this._components);
-    this._observeMessageCreate.subscribeAll(this._components);
+    this._observeMessage.subscribeAll(...this._components);
+    this._observeMessageCreate.subscribeAll(...this._components);
   }
 
   _loadEvents() {
