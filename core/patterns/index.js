@@ -13,8 +13,11 @@ class Observable {
     componentArray.forEach((component) => this.subscribe(component));
   }
 
-  notify(payload) {
-    this._observers.forEach((observer) => observer(payload));
+  notify(payload, object) {
+    this._observers.forEach((observer) => {
+      let boundObserver = observer.bind(object);
+      boundObserver(payload);
+    });
   }
 }
 

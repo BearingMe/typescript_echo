@@ -15,8 +15,12 @@ class Bot {
   }
 
   _loadEvents() {
-    this._session.on("message", (msg) => this._observeMessage.notify(msg));
-    this._session.on("message_create", (msg) => this._observeMessageCreate.notify(msg));
+    this._session.on("message", (msg) =>
+      this._observeMessage.notify(msg, this._session)
+    );
+    this._session.on("message_create", (msg) =>
+      this._observeMessageCreate.notify(msg, this._session)
+    );
   }
 
   start() {
