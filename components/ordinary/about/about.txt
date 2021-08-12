@@ -1,0 +1,7 @@
+*Criado utilizando como base o projeto Alice, sob licença Apache 2.0* 
+
+Este Bot é um sistema de código aberto criado para auxiliar nos grupos Coding, mantido de forma que possa facilitar a inclusão de novos programadores desenvolvimento. 
+
+_Escrito originalmente por @carlos3g e @BearingMe_ 
+
+_Saiba mais em: https://github.com/BearingMe/Bot_
