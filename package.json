@@ -22,6 +22,9 @@
   },
   "homepage": "https://github.com/BearingMe/Bot#readme",
   "dependencies": {
+    "axios": "^0.21.1",
+    "cheerio": "^1.0.0-rc.10",
+    "google-it": "^1.6.2",
     "qrcode-terminal": "^0.12.0",
     "whatsapp-web.js": "^1.14.0"
   }
