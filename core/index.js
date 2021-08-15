@@ -1,17 +1,18 @@
 const auth = require("./auth");
 const patterns = require("./patterns");
+const build = require("./build")
 
 class Bot {
   constructor(options) {
     this._session = new auth.Session();
-    this._components = options.components;
+    this._components = new build.Components(options.components);
     this._observeMessage = new patterns.Observable("message");
     this._observeMessageCreate = new patterns.Observable("message_create");
   }
 
   _loadObservers() {
-    this._observeMessage.subscribeAll(...this._components);
-    this._observeMessageCreate.subscribeAll(...this._components);
+    this._observeMessage.subscribeAll(...this._components.create());
+    this._observeMessageCreate.subscribeAll(...this._components.create());
   }
 
   _loadEvents() {
