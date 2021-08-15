@@ -11,16 +11,18 @@ class Bot {
   }
 
   _loadObservers() {
+    this._components.bind(this._session)
+
     this._observeMessage.subscribeAll(...this._components.create());
     this._observeMessageCreate.subscribeAll(...this._components.create());
   }
 
   _loadEvents() {
     this._session.on("message", (msg) =>
-      this._observeMessage.notify(msg, this._session)
+      this._observeMessage.notify(msg)
     );
     this._session.on("message_create", (msg) =>
-      this._observeMessageCreate.notify(msg, this._session)
+      this._observeMessageCreate.notify(msg)
     );
   }
 

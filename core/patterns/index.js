@@ -40,15 +40,9 @@ class Observable {
   /**
    * chama todos os componentes de uma vez
    * @param payload - objeto emitido nos eventos do bot
-   * @param object - cliente que gerencia o whatsapp
-   * @see https://docs.wwebjs.dev/
    */
-  notify(payload, client) {
-    this._observers.forEach((observer) => {
-      // permite que a função tenha acesso ao client na forma de this
-      let boundObserver = observer.bind(client);
-      boundObserver(payload);
-    });
+  notify(payload) {
+    this._observers.forEach((observer) => observer(payload));
   }
 }
 
