@@ -4,7 +4,7 @@
  * @param { Array<string> } numberBlacklist - lista de números banidos
 */
 function isNumberBlacklisted(authorNumber, numberBlacklist) {
-  return numberBlacklist.some((numberBanned) => authorNumber.startsWith(numberBanned))
+  return numberBlacklist.some((numberBanned) => (authorNumber === numberBanned))
 }
 
 module.exports = {
