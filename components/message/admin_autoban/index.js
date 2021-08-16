@@ -3,7 +3,7 @@ const functions = require("./functions")
 
 
 async function template(msg) {
-  let contact = await msg.getContact()
+  let contact = await msg.getContact() || { number: '' }
   let chat = await msg.getChat()
 
   let banned = utils.file.openJSON(__dirname, "./banned.json")
