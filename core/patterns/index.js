@@ -38,7 +38,7 @@ class Observable {
   }
 
   /**
-   * chama todos os componentes de uma vez
+   * chama todos os templates de uma vez
    * @param payload - objeto emitido nos eventos do bot
    */
   notify(payload) {

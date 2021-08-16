@@ -1,4 +1,6 @@
 const validation = require('./validation')
+const parse = require('./parse')
+const variables = require('./variables')
 
 class Components {
   constructor(components) {
@@ -10,19 +12,29 @@ class Components {
       let validade = new validation.Validate(component)
       validade.name()
       validade.trigger()
-      validade.props()
       validade.template()
     })
   }
 
-  bind(object) {
+  _loadProps() {
     this._components.forEach(component => {
-      component.template = component.template.bind(object)
-    })    
+      let template = component.template
+      component.template = (payload) => {
+        let flags = new parse.Flags(variables.regex, payload.body)
+        template(payload, flags.any()) 
+      }
+    })
+  }
+
+  bind(session) {
+    this._components.forEach(component => {
+      component.template = component.template.bind(session)
+    })
   }
 
   create() {
     this._validateComponents()
+    this._loadProps()
     return this._components
   }
 }
