@@ -1,0 +1,8 @@
+Link do Grupo de Testes:
+_https://chat.whatsapp.com/ChSKdE7ia0EGms1VyY2BNW_
+
+GitHub do Projeto:
+_https://github.com/BearingMe/Bot_
+
+GitHub da Biblioteca Utilizada:
+_https://github.com/pedroslopez/whatsapp-web.js_
