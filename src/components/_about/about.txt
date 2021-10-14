@@ -1,0 +1,7 @@
+*Criado utilizando como base a biblioteca whatsapp-web.js, sob licença Apache 2.0* 
+
+Este Bot é um sistema de código aberto feito para auxiliar nos grupos Coding, mantido de forma que possa facilitar a inclusão de novos programadores ao seu desenvolvimento
+
+_Escrito originalmente por @carlos3g e @BearingMe_ 
+
+_Saiba mais em: https://github.com/BearingMe/Bot_
