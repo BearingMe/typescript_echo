@@ -25,6 +25,7 @@
     "typescript": "^4.4.4"
   },
   "dependencies": {
+    "qrcode-terminal": "^0.12.0",
     "whatsapp-web.js": "^1.14.1"
   }
 }
