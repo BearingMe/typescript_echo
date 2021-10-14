@@ -1,4 +1,5 @@
 import { Session } from "./auth";
+import { Matcher } from "./filters";
 import { metadata } from "./components";
 
 const session = new Session();
@@ -6,11 +7,11 @@ const session = new Session();
 const components = Object.values(metadata);
 
 session.on("message_create", (msg) => {
-  const text = msg.body as string;
+  const matcher = new Matcher(msg);
 
   components
     .filter((c) => c.trigger == "message_create")
-    .filter((c) => text.match(c.alias))
+    .filter((c) => matcher.alias(c.alias))
     .forEach((c) => c.template(msg));
 });
 
