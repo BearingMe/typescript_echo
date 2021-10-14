@@ -1,9 +1,10 @@
 counter = 0
 
-function template(msg) {
-  if (msg.body.includes('\count')) {
+function template(msg, props) {
+  if (msg.body.includes('\\count')) {
     counter++
     msg.reply(String(counter))
+    console.log(props)
   }
 }
 
