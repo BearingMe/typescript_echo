@@ -38,7 +38,7 @@ export class Session extends Client {
   private load() {
     // carrega os dados do json em um objeto
     let raw = fs.readFileSync(SESSION_FILE_PATH);
-    let data = JSON.parse(String(raw));
+    let data = JSON.parse(raw.toString());
 
     // carrega os dados do objeto no local storage do navegador
     /* @ts-ignore */
