@@ -16,6 +16,7 @@ session.on("message_create", async (msg) => {
     .filter(async (c) => c.trigger == "message_create")
     .filter(async (c) => matcher.alias(c.alias))
     .filter(async (c) => matcher.scope(c.scope))
+    .filter(async (c) => matcher.role(c.role))
     .resolve();
 
   results.forEach((c) => c.template(msg));
