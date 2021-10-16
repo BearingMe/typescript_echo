@@ -11,6 +11,6 @@ function template(msg: any): void {
 
 export const forbidden_link: MetadataProtocol = {
   alias: /chat\.whatsapp\.com/,
-  trigger: "message_create",
+  trigger: "message",
   template: template,
 };

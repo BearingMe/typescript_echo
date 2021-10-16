@@ -9,6 +9,6 @@ function template(msg: any): void {
 
 export const links: MetadataProtocol = {
   alias: /^!links$/,
-  trigger: "message_create",
+  trigger: "message",
   template: template,
 };

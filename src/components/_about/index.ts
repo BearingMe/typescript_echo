@@ -9,7 +9,6 @@ function template(msg: any): void {
 
 export const about: MetadataProtocol = {
   alias: /^!about$/,
-  scope: "group_only",
-  trigger: "message_create",
+  trigger: "message",
   template: template,
 };

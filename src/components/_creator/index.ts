@@ -9,7 +9,6 @@ function template(msg: any): void {
 
 export const creator: MetadataProtocol = {
   alias: /^!creator$/,
-  trigger: "message_create",
-  scope: "anywhere",
+  trigger: "message",
   template: template,
 };

@@ -10,7 +10,6 @@ function template(msg: any): void {
 
 export const count: MetadataProtocol = {
   alias: /^!count$/,
-  trigger: "message_create",
-  scope: "private_only",
+  trigger: "message",
   template: template,
 };

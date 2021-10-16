@@ -9,6 +9,6 @@ function template(msg: any): void {
 
 export const flip: MetadataProtocol = {
   alias: /^!flip$/,
-  trigger: "message_create",
+  trigger: "message",
   template: template,
 };
