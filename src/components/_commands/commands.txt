@@ -1,0 +1,14 @@
+*Lista de comandos*:
+
+ - !about<all>
+ - !bot<all>
+ - !count<all>
+ - !creator<all>
+ - !flip<all>
+ - !jokenpo<all>
+ - !links<all>
+ - !promote<admin>
+ - !remove<admin>
+
+
+_Nem todas as funções disponíveis estão completamente finalizadas. Futuramente será possivel acompanhar o desenvolvimento de cada uma delas através do github do projeto_
