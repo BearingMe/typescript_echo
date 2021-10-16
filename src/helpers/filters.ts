@@ -19,20 +19,9 @@ export class Matcher {
 
     pattern = pattern ?? "anywhere";
 
-    if (pattern == "anywhere") {
-      console.log("anywhere");
-      return true;
-    }
-
-    if (pattern == "group_only" && contact.isGroup) {
-      console.log("group_only");
-      return true;
-    }
-
-    if (pattern == "private_only" && contact.isUser) {
-      console.log("private_only");
-      return true;
-    }
+    if (pattern == "anywhere") return true;
+    if (pattern == "group_only" && contact.isGroup) return true;
+    if (pattern == "private_only" && contact.isUser) return true;
 
     return false;
   }
