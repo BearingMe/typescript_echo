@@ -25,4 +25,29 @@ export class Matcher {
 
     return false;
   }
+
+  async role(pattern?: string): Promise<boolean> {
+    const chat = await this._msg.getChat();
+    const author = this._msg.author || this._msg.from;
+
+    pattern = pattern ?? "anyone";
+
+    if (pattern == "anyone") return true;
+
+    if (chat.isGroup) {
+      const admins = chat.participants
+        .filter((p: any) => p.isAdmin)
+        .map((p: any) => p.id._serialized);
+
+      const creator = chat.participants
+        .filter((p: any) => p.isSuperAdmin)
+        .map((p: any) => p.id._serialized);
+
+      if (pattern == "creator_only" && creator.includes(author)) return true;
+
+      if (pattern == "staff_only" && admins.includes(author)) return true;
+    }
+
+    return false;
+  }
 }
