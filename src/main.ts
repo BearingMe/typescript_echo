@@ -6,7 +6,7 @@ const session = new Session();
 const components = Object.values(metadata);
 
 session.on("message_create", (msg) => {
-  const text = msg.body as string;
+  const text = msg.body;
 
   components
     .filter((c) => c.trigger == "message_create")
