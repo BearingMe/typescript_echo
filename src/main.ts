@@ -1,17 +1,14 @@
-import { Session } from "./auth";
-import { metadata } from "./components";
+import * as venom from 'venom-bot';
 
-const session = new Session();
+async function start(_: any) {
+  console.log('Bot started');
+}    
 
-const components = Object.values(metadata);
+const options = {
+  session: 'echo',
+}
 
-session.on("message_create", (msg) => {
-  const text = msg.body;
-
-  components
-    .filter((c) => c.trigger == "message_create")
-    .filter((c) => text.match(c.alias))
-    .forEach((c) => c.template(msg));
-});
-
-session.start();
+venom
+  .create(options)
+  .then(client => start(client))
+  .catch(error => console.log(error));

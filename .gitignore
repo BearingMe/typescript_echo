@@ -1,4 +1,5 @@
 node_modules/
+tokens/
 package-lock.json
 src/auth/session.json
 sandbox.js
