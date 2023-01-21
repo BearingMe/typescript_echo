@@ -1,14 +1,19 @@
-import * as venom from 'venom-bot';
+import { Whatsapp, Message } from 'venom-bot';
 
-async function start(_: any) {
-  console.log('Bot started');
-}    
+import { metadata } from './components';
 
-const options = {
-  session: 'echo',
+const components = Object.values(metadata);
+
+async function anyMessageHandler(this: Whatsapp, message: Message) {
+  const text = message.body;
+
+  console.log(`Received message: ${text} from ${message.sender}`);
+  
+  components
+    .filter(c => text.match(c.alias))
+    .forEach(c => c.template(this));
 }
 
-venom
-  .create(options)
-  .then(client => start(client))
-  .catch(error => console.log(error));
+export {
+  anyMessageHandler,
+};

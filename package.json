@@ -2,10 +2,10 @@
   "name": "bot",
   "version": "0.0.2",
   "description": "whatsapp bot",
-  "main": "index.ts",
+  "main": "./src/server.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ts-node ./src/main.ts"
+    "start": "ts-node ./src/server.ts"
   },
   "repository": {
     "type": "git",
