@@ -1,3 +1,5 @@
+import type { ClientRequest } from "./types/request";
+
 export const setup = {
   name: "about",
   alias: /^!about$/,
@@ -7,4 +9,4 @@ export const setup = {
   author: "Smith",
 };
 
-export const template = () => {};
+export const template = (request: ClientRequest) => {};
