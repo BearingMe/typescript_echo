@@ -1,4 +1,4 @@
-import type { ClientRequest } from "./types/request";
+import type { Request } from "./protocols/interfaces/request.protocol";
 
 export const setup = {
   name: "about",
@@ -9,4 +9,4 @@ export const setup = {
   author: "Smith",
 };
 
-export const template = (request: ClientRequest) => {};
+export const template = (request: Request) => {};
