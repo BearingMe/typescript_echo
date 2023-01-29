@@ -6,15 +6,15 @@ export type MessageType = {
   };
 
   body: {
-    username: string;
     text?: string;
     payload?: any; // TODO: future implementation
   };
 
-  headers: {
-    id: string;
+  info: {
+    user_id: string;
+    chat_id: string;
+    source_type: "group" | "private" | "status";
+    content_type: "text" | "media" | "sticker"; // TODO: working in progress
     timestamp: Date;
-    source: "group" | "private" | "status";
-    content: "text" | "media" | "sticker"; // TODO: working in progress
   };
 };

@@ -5,5 +5,5 @@ export interface Request {
 
   get body(): Promise<MessageType["body"]>;
 
-  get headers(): Promise<MessageType["headers"]>;
+  get info(): Promise<MessageType["info"]>;
 }
